@@ -1,4 +1,4 @@
-# Crypto Transactions API
+# [Crypto Transactions API](https://crypto-transactions-api-p0jr.onrender.com/transactions/0xce94e5621a5f7068253c42558c147480f38b5e0d)
 
 This is a Node.js API that allows users to fetch Ethereum transactions, calculate their total expenses, and retrieve the current price of Ethereum. The project uses MongoDB for storing transaction data and Ethereum prices.
 
@@ -47,6 +47,7 @@ npm start
 ```
 
 The server will start at `http://localhost:${PORT}`.
+However, you can also use it on this website if you don't want to build the project: `https://crypto-transactions-api-p0jr.onrender.com`
 
 ## API Endpoints
 
