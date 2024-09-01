@@ -61,7 +61,7 @@ Fetch a list of Ethereum transactions for the given address and store them in th
 - **URL Params**: `:address=[string]` (Ethereum address)
 - **Success Response**:
   - **Code**: `200 OK`
-  - **Content**: `{ transactions: [...] }`
+  - **Content**: `{ status:"1", message:"OK", transactions: [...] }`
 - **Error Response**:
   - **Code**: `500 INTERNAL SERVER ERROR`
   - **Content**: `{ error: "Server Error" }`
@@ -77,7 +77,7 @@ Calculate the total expenses for a user and return the current Ethereum price.
 - **URL Params**: `:address=[string]` (Ethereum address)
 - **Success Response**:
   - **Code**: `200 OK`
-  - **Content**: `{ totalExpenses: "0.123456", currentEthPrice: 3000 }`
+  - **Content**: `{ totalExpenses: "0.123456", ethereumPrice: 3000 }`
 - **Error Response**:
   - **Code**: `500 INTERNAL SERVER ERROR`
   - **Content**: `{ error: "Server Error" }`
@@ -87,12 +87,12 @@ Calculate the total expenses for a user and return the current Ethereum price.
 ```bash
 ├── controllers
 │   ├── transactionController.js
-|   └── expensesController.js
+│   └── expensesController.js
 ├── models
 │   ├── transactionModel.js
-│   └── ethPriceModel.js
+│   └── ethereumPriceModel.js
 ├── services
-│   └── ethPriceService.js
+│   └── ethereumPriceService.js
 ├── App.js
 └── .env
 ```
@@ -100,8 +100,8 @@ Calculate the total expenses for a user and return the current Ethereum price.
 - **`controllers/transactionController.js`**: Handles requests related to fetching transactions.
 - **`controllers/expensesController.js`**: Handles requests related to calculating expenses and getting the latest ethereum price.
 - **`models/transactionModel.js`**: Mongoose model for storing Ethereum transactions.
-- **`models/ethPriceModel.js`**: Mongoose model for storing Ethereum price data.
-- **`services/ethPriceService.js`**: Service for fetching the current Ethereum price and saving it to the database.
+- **`models/ethereumPriceModel.js`**: Mongoose model for storing Ethereum price data.
+- **`services/ethereumPriceService.js`**: Service for fetching the current Ethereum price and saving it to the database.
 - **`App.js`**: Main server file that sets up the API routes and starts the application.
 
 ## How It Works
